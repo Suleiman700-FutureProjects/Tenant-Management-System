@@ -10,7 +10,7 @@ class Login {
 
         const is_valid = this.validate(username, password)
 
-        
+
     }
 
     /**
