@@ -1,3 +1,16 @@
 import InputBuilder from '/javascript/Inputs/InputBuilder.js'
 
-export default new InputBuilder('password', 'login_div')
+const validation = {
+    required: true,
+    min_len: {
+        active: false,
+        value: 1
+    },
+    max_len: {
+        active: false,
+        value: 5
+    },
+    type: 'string',
+}
+
+export default new InputBuilder('password', 'login_div', validation)
