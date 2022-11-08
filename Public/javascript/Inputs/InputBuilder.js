@@ -17,6 +17,7 @@ export default class InputBuilder {
     on_input() {
         document.querySelector(`#${this.parent_id} input#${this.id}`).addEventListener('change', () => {
             console.log('on input')
+            this.mark_error(false)
         })
     }
 

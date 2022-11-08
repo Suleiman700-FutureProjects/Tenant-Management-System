@@ -1,4 +1,4 @@
-import InputBuilder from '/javascript/Inputs/InputBuilder.js'
+import InputBuilder from '../../../javascript/Inputs/InputBuilder.js'
 
 const validation = {
     required: true,

@@ -1,9 +1,12 @@
 <?php
 
+require_once '../../../Config/CONST.php';
+require_once '../../../Classes/Auth/Login/Login.php';
+
 if (isset($_POST) && $_POST['model'] = 'do_login') {
     $valid_data = true;
 
-    // Check if username is set
+    // Check if username is seta
     if (isset($_POST['data']['username'])) {
         $username = $_POST['data']['username'];
     } else {
@@ -18,9 +21,9 @@ if (isset($_POST) && $_POST['model'] = 'do_login') {
     }
 
     if (!$valid_data) {
-        echo 'bad';
+//        echo 'bad';
     }
     else {
-        echo 'good';
+//        echo 'good';
     }
 }

@@ -1,11 +1,9 @@
+<?php
+//
+//require_once '../../Config/CONST.php'
+//
+//?>
 <!DOCTYPE html>
-<!--
-* CoreUI - Free Bootstrap Admin Template
-* @version v4.2.1
-* @link https://coreui.io
-* Copyright (c) 2022 creativeLabs Łukasz Holeczek
-* Licensed under MIT (https://coreui.io/license)
--->
 <html lang="en">
 <head>
     <base href="./">
@@ -15,7 +13,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-    <title>Tenant Management System</title>
+<!--    <title>Login | --><?php //echo APP_NAME; ?><!--</title>-->
     <link rel="apple-touch-icon" sizes="57x57" href="../../assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../../assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../../assets/favicon/apple-icon-72x72.png">
@@ -31,11 +29,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+<!--    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">-->
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
-    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">
+<!--    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">-->
     <link rel="stylesheet" href="../../css/vendors/simplebar.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <!-- Main styles for this application-->
     <link href="../../css/style.css" rel="stylesheet">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
@@ -65,25 +64,25 @@
                 <div class="card-group d-block d-md-flex row">
                     <div class="card col-sm-12 p-4 mb-0">
                         <div class="card-body">
-                            <h1>Login</h1>
-                            <p class="text-medium-emphasis">Sign In to your account</p>
-                            <div class="input-group mb-3"><span class="input-group-text">
-                      <svg class="icon">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                      </svg></span>
+                            <h1 class="text-center">Login</h1>
+                            <p class="text-medium-emphasis text-center">Sign In to your account</p>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <i class="fa fa-user"></i>
+                                </span>
                                 <input type="text" class="form-control" id="username" placeholder="Username">
                             </div>
-                            <div class="input-group mb-4"><span class="input-group-text">
-                      <svg class="icon">
-                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-                      </svg></span>
+                            <div class="input-group mb-4">
+                                <span class="input-group-text">
+                                    <i class="fa fa-key"></i>
+                                </span>
                                 <input type="password" class="form-control" id="password" placeholder="Password">
                             </div>
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-sm-12 text-center">
                                     <button type="button" class="btn btn-primary px-4" id="login">Login</button>
                                 </div>
-                                <div class="col-6 text-end">
+                                <div class="col-12 text-center" hidden>
                                     <button class="btn btn-link px-0" type="button">Forgot password?</button>
                                 </div>
                             </div>
@@ -95,8 +94,8 @@
     </div>
 </div>
 <!-- CoreUI and necessary plugins-->
-<script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
-<script src="vendors/simplebar/js/simplebar.min.js"></script>
+<!--<script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>-->
+<!--<script src="vendors/simplebar/js/simplebar.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="./js/init.js" type="module"></script>
 <script>

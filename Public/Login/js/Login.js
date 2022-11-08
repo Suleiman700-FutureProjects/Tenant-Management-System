@@ -1,6 +1,6 @@
 import Inpt_Username from './Inputs/Inpt_Username.js';
 import Inpt_Password from './Inputs/Inpt_Password.js';
-import Requests from '/javascript/Requests/Requests.js';
+import Requests from '../../javascript/Requests/Requests.js';
 
 class Login {
     constructor() {}

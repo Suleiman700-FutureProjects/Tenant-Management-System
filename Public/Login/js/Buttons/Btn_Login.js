@@ -1,5 +1,5 @@
 
-import ButtonBuilder from '/javascript/Buttons/ButtonBuilder.js';
+import ButtonBuilder from '../../../javascript/Buttons/ButtonBuilder.js';
 import Login from '../Login.js'
 
 const Callback = () => {
