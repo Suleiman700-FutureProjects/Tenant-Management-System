@@ -24,7 +24,7 @@ class Session
      * @return bool
      */
     public function get_logged(): Bool {
-        if ($_SESSION[$this->SESSION_IS_LOGGED]) return true;
+        if (isset($_SESSION[$this->SESSION_IS_LOGGED]) && $_SESSION[$this->SESSION_IS_LOGGED]) return true;
         else return false;
     }
 
