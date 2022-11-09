@@ -4,26 +4,28 @@ require_once '../../../Config/CONST.php';
 require_once '../../../Classes/Auth/Login/Login.php';
 
 if (isset($_POST) && $_POST['model'] = 'do_login') {
-    $valid_data = true;
+
+    $res = array(
+        'state' => true,
+        'login_state' => []
+    );
 
     // Check if username is seta
-    if (isset($_POST['data']['username'])) {
+    if (isset($_POST['data']['username']) && isset($_POST['data']['password'])) {
         $username = $_POST['data']['username'];
-    } else {
-        $valid_data = false;
-    }
-
-    // Check if password is set
-    if (isset($_POST['data']['password'])) {
         $password = $_POST['data']['password'];
-    } else {
-        $valid_data = false;
-    }
 
-    if (!$valid_data) {
-//        echo 'bad';
+        $Login = new Login();
+        $Login->set_username(trim(strip_tags($username)));
+        $Login->set_password(trim(strip_tags($password)));
+        $login_state = $Login->do_login();
+        $res['login_state'] = $login_state;
+
     }
     else {
-//        echo 'good';
+        $res['state'] = false;
     }
+
+    echo json_encode($res);
+
 }

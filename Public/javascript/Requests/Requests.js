@@ -19,7 +19,7 @@ export default class Requests {
                 model: this.model
             },
             success: function (data, status, xhr) {
-                res = data
+                res = JSON.parse(data)
             },
             error: function (jqXhr, textStatus, errorMessage) {
                 $('p').append('Error' + errorMessage);

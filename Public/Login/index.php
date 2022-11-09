@@ -1,8 +1,13 @@
 <?php
-//
-//require_once '../../Config/CONST.php'
-//
-//?>
+require_once '../../Config/CONST.php';
+require_once '../../Classes/Session/Session.php';
+
+// Check if logged
+$Session = new Session();
+if ($Session->get_logged()) {
+    header('Location: ../Dashboard/index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +18,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
-<!--    <title>Login | --><?php //echo APP_NAME; ?><!--</title>-->
+    <title>Login | <?php echo APP_NAME; ?></title>
     <link rel="apple-touch-icon" sizes="57x57" href="../../assets/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../../assets/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../../assets/favicon/apple-icon-72x72.png">
@@ -29,10 +34,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-<!--    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">-->
     <meta name="theme-color" content="#ffffff">
     <!-- Vendors styles-->
-<!--    <link rel="stylesheet" href="vendors/simplebar/css/simplebar.css">-->
     <link rel="stylesheet" href="../../css/vendors/simplebar.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <!-- Main styles for this application-->
@@ -40,8 +43,6 @@
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
     <link href="../../css/examples.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics-->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -66,6 +67,10 @@
                         <div class="card-body">
                             <h1 class="text-center">Login</h1>
                             <p class="text-medium-emphasis text-center">Sign In to your account</p>
+                            <div class="alert alert-primary text-center" role="alert" id="alert-msg" style="display: none;">
+                                <div class="spinner-border spinner-border-sm" role="status" id="spinner" style="display: none;"></div>
+                                <span id="text"></span>
+                            </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text">
                                     <i class="fa fa-user"></i>
@@ -97,6 +102,7 @@
 <!--<script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>-->
 <!--<script src="vendors/simplebar/js/simplebar.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./js/init.js" type="module"></script>
 <script>
 </script>

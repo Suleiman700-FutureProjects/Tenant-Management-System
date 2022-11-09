@@ -1,3 +1,7 @@
+// Initialize alert
+import Alert from '../../javascript/Alert/Alert.js';
+Alert.set_id('alert-msg')
+
 // Initialize buttons
 import Btn_Login from './Buttons/Btn_Login.js';
 import ButtonHandler from '../../javascript/Buttons/ButtonHandler.js';
