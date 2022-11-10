@@ -29,7 +29,10 @@ class Tbl_Tenants {
         const id = this.count_rows()+1
         const name = `${_tenant_data['firstname']} ${_tenant_data['lastname']}`
         const phone = _tenant_data['phone']??'-'
-        const email = _tenant_data['email']
+        const email = _tenant_data['email']??'-'
+        const action_btn = $('i').attr({'class': 'cil-pen'}).css({'cursor': 'pointer'}).click(() => {
+            this.handle_edit_click(id)
+        })
 
         $(`#${this.id}`).find('tbody')
             .append($('<tr>')
@@ -38,9 +41,17 @@ class Tbl_Tenants {
                     $('<td>').text(name),
                     $('<td>').text(phone),
                     $('<td>').text(email),
-                    $('<td>').text('ACTION SHOULD BE ADDED HERE'),
+                    $('<td>').append(action_btn),
                 )
             );
+    }
+
+    /**
+     * Handle edit icon click
+     * @param _tenant_id {number}
+     */
+    handle_edit_click(_tenant_id) {
+        console.log(_tenant_id)
     }
 }
 
