@@ -259,7 +259,7 @@ require_once '../../Config/CONST.php';
                     </div>
                     <div class="c-chart-wrapper mt-5">
                         <div class=" text-center">
-                            <table class="table table-striped">
+                            <table class="table table-striped" id="table_tenants">
                                 <thead>
                                 <tr>
                                     <th scope="col">#</th>
@@ -299,6 +299,7 @@ require_once '../../Config/CONST.php';
         <div class="ms-auto">Powered by&nbsp;<a href="https://coreui.io/docs/">CoreUI UI Components</a></div>
     </footer>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <!-- CoreUI and necessary plugins-->
 <script src="../../vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
 <script src="../../vendors/simplebar/js/simplebar.min.js"></script>
@@ -306,7 +307,7 @@ require_once '../../Config/CONST.php';
 <script src="../../vendors/chart.js/js/chart.min.js"></script>
 <script src="../../vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
 <script src="../../vendors/@coreui/utils/js/coreui-utils.js"></script>
-<script src="./js/list/Init.js" type="module"></script>
+<script src="./list/js/Init.js" type="module"></script>
 <script>
 </script>
 
