@@ -12,19 +12,6 @@ require_once '../../Config/CONST.php';
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Add Tenant | <?php echo APP_NAME; ?></title>
-    <link rel="apple-touch-icon" sizes="57x57" href="../../assets/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../../assets/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../../assets/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../../assets/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../../assets/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../../assets/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../../assets/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../../assets/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../../assets/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="../../assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
@@ -41,7 +28,17 @@ require_once '../../Config/CONST.php';
     <!-- Global site tag (gtag.js) - Google Analytics-->
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-118965717-3"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">
+
+
+<!--    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.1.3/css/bootstrap-datetimepicker.min.css">-->
+    <link rel="stylesheet" href="../../vendors/Bootstrap-Datepicker/css/bootstrap-datepicker.standalone.css">
+
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -88,51 +85,6 @@ require_once '../../Config/CONST.php';
                             <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
                         </svg></a></li>
             </ul>
-            <ul class="header-nav ms-3">
-                <li class="nav-item dropdown"><a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <div class="avatar avatar-md"><img class="avatar-img" src="assets/img/avatars/8.jpg" alt="user@email.com"></div>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end pt-0">
-                        <div class="dropdown-header bg-light py-2">
-                            <div class="fw-semibold">Account</div>
-                        </div><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-bell"></use>
-                            </svg> Updates<span class="badge badge-sm bg-info ms-2">42</span></a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
-                            </svg> Messages<span class="badge badge-sm bg-success ms-2">42</span></a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-task"></use>
-                            </svg> Tasks<span class="badge badge-sm bg-danger ms-2">42</span></a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-comment-square"></use>
-                            </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
-                        <div class="dropdown-header bg-light py-2">
-                            <div class="fw-semibold">Settings</div>
-                        </div><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-user"></use>
-                            </svg> Profile</a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-settings"></use>
-                            </svg> Settings</a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-credit-card"></use>
-                            </svg> Payments<span class="badge badge-sm bg-secondary ms-2">42</span></a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-file"></use>
-                            </svg> Projects<span class="badge badge-sm bg-primary ms-2">42</span></a>
-                        <div class="dropdown-divider"></div><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
-                            </svg> Lock Account</a><a class="dropdown-item" href="#">
-                            <svg class="icon me-2">
-                                <use xlink:href="../../vendors/@coreui/icons/svg/free.svg#cil-account-logout"></use>
-                            </svg> Logout</a>
-                    </div>
-                </li>
-            </ul>
         </div>
         <div class="header-divider"></div>
         <div class="container-fluid">
@@ -160,7 +112,7 @@ require_once '../../Config/CONST.php';
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label" for="firstname">First Name</label>
+                                        <label class="form-label" for="firstname">First Name <code>*</code></label>
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="cil-user"></i></div>
                                             <input type="text" class="form-control" id="firstname" placeholder="John">
@@ -169,7 +121,7 @@ require_once '../../Config/CONST.php';
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="mb-3">
-                                        <label class="form-label" for="lastname">Last Name</label>
+                                        <label class="form-label" for="lastname">Last Name <code>*</code></label>
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="cil-user"></i></div>
                                             <input type="text" class="form-control" id="lastname" placeholder="Doe">
@@ -207,32 +159,43 @@ require_once '../../Config/CONST.php';
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-sm-4">
-
-                                </div>
-
-                                <div class="container">
-                                    <div class="row">
-                                        Date formats: yyyy-mm-dd, yyyymmdd, dd-mm-yyyy, dd/mm/yyyy, ddmmyyyyy
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="date">Rental Date</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="cil-calendar"></i></div>
+                                            <input class="form-control datepicker" id="date" data-date-format="dd/mm/yyyy" placeholder="18/10/2018">
+                                        </div>
                                     </div>
-                                    <br />
-                                    <div class="row">
-                                        <div class='col-sm-3'>
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker1'>
-                                                    <input type='text' class="form-control" />
-                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                                                </div>
-                                            </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="time">Rental Time</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="cil-calendar"></i></div>
+                                            <input class="form-control" type="text" id="timepicker-demo" placeholder="16:40:00" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="date">Note</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text"><i class="cil-calendar"></i></div>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
+                            <script>
+                                $('#timepicker-demo').datetimepicker({
+                                    format: 'hh:mm:ss',
+                                });
+                            </script>
+
                         </div>
 
                     </div>
@@ -257,6 +220,7 @@ require_once '../../Config/CONST.php';
 <script src="../../vendors/@coreui/chartjs/js/coreui-chartjs.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../vendors/@coreui/utils/js/coreui-utils.js"></script>
+<script src="../../vendors/Bootstrap-Datepicker/js/bootstrap-datepicker.js"></script>
 <!--<script src="./list/js/Init.js" type="module"></script>-->
 <script>
 </script>
