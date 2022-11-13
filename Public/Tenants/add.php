@@ -184,7 +184,7 @@ require_once '../../Config/CONST.php';
                                         <label class="form-label" for="date">Note</label>
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="cil-calendar"></i></div>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" dir="auto"></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -223,6 +223,11 @@ require_once '../../Config/CONST.php';
 <script src="../../vendors/Bootstrap-Datepicker/js/bootstrap-datepicker.js"></script>
 <!--<script src="./list/js/Init.js" type="module"></script>-->
 <script>
+    $(document).ready(function() {
+        $('.datepicker').datepicker({
+            startDate: '-3d',
+        });
+    });
 </script>
 
 </body>
