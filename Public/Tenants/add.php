@@ -12,7 +12,6 @@ require_once '../../Config/CONST.php';
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Add Tenant | <?php echo APP_NAME; ?></title>
-    <link rel="manifest" href="../../assets/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -108,7 +107,11 @@ require_once '../../Config/CONST.php';
                         </div>
                     </div>
                     <div class="c-chart-wrapper mt-5">
-                        <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-739">
+                        <div class="alert alert-primary text-center" role="alert" id="alert-msg" style="display: none;">
+                            <div class="spinner-border spinner-border-sm" role="status" id="spinner" style="display: none;"></div>
+                            <span id="text"></span>
+                        </div>
+                        <div class="tab-pane p-3 active preview" role="tabpanel" id="add-section">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="mb-3">
@@ -164,7 +167,7 @@ require_once '../../Config/CONST.php';
                                         <label class="form-label" for="date">Rental Date</label>
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="cil-calendar"></i></div>
-                                            <input class="form-control datepicker" id="date" data-date-format="dd/mm/yyyy" placeholder="18/10/2018">
+                                            <input class="form-control datepicker" id="rental_date" data-date-format="dd/mm/yyyy" placeholder="18/10/2018">
                                         </div>
                                     </div>
                                 </div>
@@ -173,7 +176,7 @@ require_once '../../Config/CONST.php';
                                         <label class="form-label" for="time">Rental Time</label>
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="cil-calendar"></i></div>
-                                            <input class="form-control" type="text" id="timepicker-demo" placeholder="16:40:00" />
+                                            <input class="form-control" type="text" id="rental_time" placeholder="16:40:00" />
                                         </div>
                                     </div>
                                 </div>
@@ -184,17 +187,30 @@ require_once '../../Config/CONST.php';
                                         <label class="form-label" for="date">Note</label>
                                         <div class="input-group">
                                             <div class="input-group-text"><i class="cil-calendar"></i></div>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" dir="auto"></textarea>
+                                            <input class="form-control" id="note" rows="3" dir="auto"></input>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <script>
-                                $('#timepicker-demo').datetimepicker({
+                                $('#rental_time').datetimepicker({
                                     format: 'hh:mm:ss',
                                 });
                             </script>
+
+                            <hr />
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <button class="btn btn-primary" id="save"><i class="cil-save"></i> Save</button>
+                                            <button class="btn btn-light mx-3" id="cancel">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
 
@@ -221,6 +237,7 @@ require_once '../../Config/CONST.php';
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../../vendors/@coreui/utils/js/coreui-utils.js"></script>
 <script src="../../vendors/Bootstrap-Datepicker/js/bootstrap-datepicker.js"></script>
+<script src="./add/js/Init.js" type="module"></script>
 <!--<script src="./list/js/Init.js" type="module"></script>-->
 <script>
     $(document).ready(function() {

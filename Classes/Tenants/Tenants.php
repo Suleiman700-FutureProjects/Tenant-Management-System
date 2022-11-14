@@ -55,4 +55,29 @@ class Tenants
 
         return $res;
     }
+
+    /**
+     * Add new tenant
+     * @param array $_data
+     * @return array
+     */
+    public function add_tenant(Array $_data): Array
+    {
+        global $conn;
+
+        $res = array(
+            'state' => true,
+            'inserted' => true
+        );
+
+        $stmt = $conn->prepare("INSERT INTO tenants (id, firstname, lastname, phone, email, id_card, owned_by_user, rental_start_date, rental_start_TIME, rental_document, note) VALUES (?, ?),(?,?),(?,?)");
+        $stmt->bind_param('ssssss', 'Joe', 'Smith','Fred','Sampson','Lisa','Pearce');
+
+
+        echo '<pre>';
+        print_r($_data);
+        echo '</pre>';
+
+        return $res;
+    }
 }

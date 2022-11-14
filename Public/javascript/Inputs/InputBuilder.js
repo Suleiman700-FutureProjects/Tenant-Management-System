@@ -58,8 +58,11 @@ export default class InputBuilder {
 
         // Check if validations are set for this input
         if (!Object.keys(this.validation).length) {
-            res['valid'] = false
-            throw `[Validation settings not set for input #${this.id}]`
+            // res['valid'] = false
+            // throw `[Validation settings not set for input #${this.id}]`
+
+            res['valid'] = true
+            return res
         }
 
         // Check required
